@@ -293,4 +293,3 @@ TypeSpec で決めた契約をテストへ写し直さず、実際の API と照
 - [openapi_first v4.2.0 の公式 Rails サンプル](https://github.com/ahx/openapi_first/tree/v4.2.0/examples/rails_app)
 - [openapi_first v4.2.0 の契約テストの実装](https://github.com/ahx/openapi_first/blob/v4.2.0/lib/openapi_first/test.rb)と[設定および既定値](https://github.com/ahx/openapi_first/blob/v4.2.0/lib/openapi_first/test/configuration.rb)
 - [Rails Guides：Rails on Rack](https://guides.rubyonrails.org/v8.1/rails_on_rack.html)
-
