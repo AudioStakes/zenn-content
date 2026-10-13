@@ -3,7 +3,7 @@ title: "TypeSpec × openapi_first によるスキーマ駆動開発の体験が�
 emoji: "🧩"
 type: "tech"
 topics: ["typespec", "openapi", "rails", "rspec", "ai"]
-published: false
+published: true
 ---
 
 TypeSpec と openapi_first を組み合わせると、Rails の API が仕様に適合しているかを機械的に検証できます。
