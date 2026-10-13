@@ -1,12 +1,12 @@
 ---
-title: "【スキーマ駆動】TypeSpec × OpenAPI First の開発体験がとても良い"
+title: "TypeSpec × openapi_first によるスキーマ駆動開発の体験がとても良かった"
 emoji: "🧩"
 type: "tech"
 topics: ["typespec", "openapi", "rails", "rspec", "ai"]
 published: false
 ---
 
-TypeSpec と openapi_first を組み合わせると、テストで実行した Rails の API が仕様に適合しているかを機械的に検証できます。
+TypeSpec と openapi_first を組み合わせると、Rails の API が仕様に適合しているかを機械的に検証できます。
 型や必須項目の検証条件をテストへ書き写す手間が減り、仕様変更後も同じテストで実装を確かめられます。
 AI エージェントにも実装を任せやすくなります。
 このスキーマ駆動の開発体験がとても良かったので紹介します。
@@ -14,10 +14,12 @@ AI エージェントにも実装を任せやすくなります。
 ここでいう API 契約は、リクエストとレスポンスの型や必須項目、HTTP ステータスなど、仕様に記述した条件です。
 その仕様を先に決め、ドキュメントと実装の検証に使う進め方を、この記事ではスキーマ駆動開発と呼びます。
 
-この記事に合わせて、[タスク管理 API のサンプルアプリ](https://github.com/AudioStakes/rails-typespec-openapi-first-sample)を作りました。
+この記事に合わせて、タスク管理 API のサンプルアプリを作りました。
+https://github.com/AudioStakes/rails-typespec-openapi-first-sample
+
 Swagger UI から動作を試し、仕様変更 → テスト失敗 → 実装修正 → テスト成功を体験できます。
 以降はこのサンプルで説明します。
-セットアップと演習の手順は README を参照してください。
+セットアップと演習の手順は [README](https://github.com/AudioStakes/rails-typespec-openapi-first-sample#readme) を参照してください。
 
 **動作確認に使用したバージョン**
 
@@ -25,9 +27,6 @@ Swagger UI から動作を試し、仕様変更 → テスト失敗 → 実装�
 | --- | --- |
 | TypeSpec（`@typespec/compiler`） | 1.17.0 |
 | openapi_first | 4.2.0 |
-
-ほかの動作環境、OpenAPI の版、依存関係は、[README](https://github.com/AudioStakes/rails-typespec-openapi-first-sample#readme)と lockfile を参照してください。
-検証時点のコードはコミット [`7e536a1`](https://github.com/AudioStakes/rails-typespec-openapi-first-sample/tree/7e536a1990c132a0e5b200ffaf793ea296643867)です。
 
 ## TypeSpec なら、TypeScript に似た構文で API の型と操作を記述できる
 
